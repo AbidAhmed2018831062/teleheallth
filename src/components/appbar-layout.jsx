@@ -11,7 +11,7 @@ export function AppBarLayout({
         <div>
           {actionText && <button onClick={onActionClick}>{actionText}</button>}
         </div>
-      </div>
+       </div>
       {children}
     </section>
   );

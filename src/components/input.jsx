@@ -1,5 +1,5 @@
 export function Input(props = {}) {
-  const { label, trailingButton, ...inputProps } = props;
+  const { label, register, trailingButton, ...inputProps } = props;
   return (
     <div className="w-full">
       {label && (
@@ -8,7 +8,7 @@ export function Input(props = {}) {
         </div>
       )}
       <div className="input w-full">
-        <input {...inputProps} className="w-full" />
+        <input {...inputProps} {...(register || {})} className="w-full" />
       </div>
     </div>
   );

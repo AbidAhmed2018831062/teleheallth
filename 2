@@ -1,0 +1,20 @@
+import { useState } from "react";
+import "./App.css";
+import { MemberRegistration } from "./pages/member/registration";
+import { Dashboard } from "./pages/member/dashboard";
+import { MemberLogin } from "./pages/member/login";
+import { CompleteProfile } from "./pages/member/complete-profile";
+import { BrowserRouter, Route, RouterProvider, Routes, createBrowserRouter } from "react-router-dom";
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+        <Route path="/" element={<MemberRegistration/>}/>
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
+}
+
+export default App;

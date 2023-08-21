@@ -1,6 +1,19 @@
 import logo from "../assets/satori_logo_text.png";
 import bell from "../assets/bell.png";
 import profile from "../assets/profile.png";
+const navOptions =() => [
+  {
+    title: 'Dashboard',
+    icon: '',
+    link: ''
+  },
+  {
+    title: 'Chats',
+    icon: '',
+    link: ''
+  }
+]
+
 export function MainLayout({ children, title }) {
   return (
     <main className="w-full h-full flex">

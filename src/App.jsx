@@ -1,12 +1,20 @@
-import { useState } from "react";
 import "./App.css";
-import { MemberRegistration } from "./pages/member/registration";
 import { Dashboard } from "./pages/member/dashboard";
-
+import { MemberRegistration } from "./pages/member/registration";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+} from "react-router-dom";
 function App() {
   return (
     <>
-      <MemberRegistration />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/member/register" element={<MemberRegistration/>}/>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
