@@ -17,7 +17,7 @@ export function MemberRegistration() {
   const createUser = async (value) => {
     const { data } = await api.post("members", value);
     localStorage.setItem("user", JSON.stringify(data));
-    navigate("/");
+    navigate("/member/complete-profile");
   };
 
   return (

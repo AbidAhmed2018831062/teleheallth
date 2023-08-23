@@ -17,12 +17,14 @@ export default {
       },
       colors: {
         "primary-dark": "#011F1E",
+        grey: "#777777",
+        "grey-wire": "#CECECE",
         primary: "#62C227",
-        base:"#FCFCFC"
+        base: "#FCFCFC",
       },
       borderWidth: {
         1: "1px",
-      }
+      },
     },
   },
 };
