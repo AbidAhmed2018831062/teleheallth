@@ -8,6 +8,7 @@ import { useLocalUser } from "../../hooks";
 import countries from "../../json/countries.json";
 import languages from "../../json/languages.json";
 import { useNavigate } from "react-router-dom";
+import { MainLayout } from "../../components/main-layout";
 
 const months = [
   "January",
@@ -58,8 +59,10 @@ export function CompleteProfile({ isEditProfile }) {
     }
   };
 
+  const Layout = isEditProfile ? MainLayout : AppBarLayout;
+
   return (
-    <AppBarLayout>
+    <Layout>
       <div className="flex flex-col gap-6 justify-center items-center p-24">
         <h1 className=" text-[35px] font-bold">Complete your profile</h1>
         <img src={profile} alt="" />
@@ -134,6 +137,6 @@ export function CompleteProfile({ isEditProfile }) {
           )}
         </form>
       </div>
-    </AppBarLayout>
+    </Layout>
   );
 }

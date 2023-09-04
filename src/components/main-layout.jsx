@@ -31,8 +31,8 @@ export function MainLayout({ children, title }) {
   };
 
   return (
-    <main className="w-full h-full flex">
-      <aside className="border-r-1 border-r-gray-300  w-[17%] px-[1.6rem] py-[4.8rem] h-screen sticky top-0">
+    <main className="w-full h-screen overflow-hidden flex">
+      <aside className="border-r-1 border-r-gray-300  w-[17%] px-[1.6rem] py-[4.8rem] h-screen">
         <img className="ml-1" src={logo} alt="" />
         <div className=" mt-14">
           {navOptions(selected).map((option) => (
@@ -99,7 +99,9 @@ export function MainLayout({ children, title }) {
             </div>
           </div>
         </header>
-        <section>{children}</section>
+        <section className=" overflow-scroll h-[calc(100vh-10.7rem)]">
+          {children}
+        </section>
       </div>
     </main>
   );
