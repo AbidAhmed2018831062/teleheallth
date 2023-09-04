@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { AppBarLayout } from "../../components/appbar-layout";
 import { Input } from "../../components/input";
 import { api } from "../../utils/axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export function MemberRegistration() {
   const {
@@ -79,7 +79,9 @@ export function MemberRegistration() {
         </form>
         <div className="flex py-[10px]">
           Already have an account?
-          <button className="underline">Login</button>
+          <Link to={"/member/login"} className="underline">
+            Login
+          </Link>
         </div>
         <div className="mt-[20px]">By signing up, I agree to SATORI’s</div>
         <div className="flex gap-1">

@@ -5,9 +5,9 @@ import { useLocalUser } from "../../hooks";
 
 export function Dashboard({}) {
   const navigate = useNavigate();
-  const user = useLocalUser();
+  const { user, setUser } = useLocalUser();
   useEffect(() => {
-    const user = localStorage.getItem("user");
+    console.log(user);
     if (!user) {
       navigate("/member/register");
     }
@@ -16,7 +16,7 @@ export function Dashboard({}) {
     <MainLayout title={"Dashboard"}>
       <div className="px-[5.2rem] pt-[2.4rem]">
         <h1 className="mb-[2rem] text-[3.5rem] font-bold">
-          Welcome, {user.firstName}!
+          Welcome, {user?.firstName}!
         </h1>
         <div className="flex gap-[3.4rem]">
           <div className="p-[3rem] flex flex-col border-1 border-grey rounded-[1rem] w-[34rem] h-[19rem]">
